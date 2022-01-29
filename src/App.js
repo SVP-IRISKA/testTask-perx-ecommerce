@@ -5,10 +5,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    // <div className="App">
-    //   <Products />
-    //   <Basket />
-    // </div>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Products />} />
@@ -19,5 +15,3 @@ function App() {
 }
 
 export default App;
-
-//app root

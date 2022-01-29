@@ -21,11 +21,22 @@ const Header = () => {
 
   return (
     <nav>
-      <Link className="store-name" to="/">Магазин</Link>
-      ----название, навигация, корзина----
-      <div>сумма товара: {totalSummaProducs().toFixed(2)} $</div>
-      <div>количество товара: {totalProducs()}</div>
-      <Link to="/basket">Корзина</Link>
+      <Link className="header-store-name" to="/">
+        Магазин "80lvl"
+      </Link>
+      <div className="header-basket-panel">
+        <div className="header-basket-info">
+          <div className="header-basket total ">
+            Сумма товара: {totalSummaProducs().toFixed(2)} $
+          </div>
+          <div className="header-basket qnt ">
+            Количество товара: {totalProducs()}
+          </div>
+        </div>
+          <Link className="header-basket-btn-link" to="/basket">
+            Корзина
+          </Link>
+      </div>
     </nav>
   );
 };

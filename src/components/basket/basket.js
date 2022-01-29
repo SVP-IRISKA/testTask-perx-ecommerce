@@ -5,16 +5,13 @@ import {
   addToBasket,
   deleteFromBasket,
   deleteFromProductBasket,
-} from "../../reducers/basket";
+} from "../../redux/reducers/basket";
 import "./basket.css";
 import BasketOrder from "./basketOrder";
 
 const Basket = () => {
   const productsBasket = useSelector((s) => s.basket.listBasket);
   const dispatch = useDispatch();
-
-  console.log(productsBasket);
-
   const addBasket = (name) => {
     dispatch(addToBasket(name));
   };
@@ -30,14 +27,23 @@ const Basket = () => {
   return (
     <div>
       <Header />
+      <hr></hr>
       <BasketOrder />
       <div className="table_basket">
-        {/* <div className="all_basket_products"> */}
-        {Object.entries(productsBasket).map((item, index) => {
+        {Object.entries(productsBasket).map((item) => {
           //item [key, value]
           return (
-            <div key={index} className="basket_product">
-              <div>картинка</div>
+            <div
+              key={Math.floor(Math.random() * 160000)}
+              className="basket_product"
+            >
+              <div className="product-basket-image">
+                <img
+                  className="product-image"
+                  src="https://murmuring-tor-81614.herokuapp.com/logo/node.png"
+                  alt="Защита картера"
+                />
+              </div>
               <div>{item[0]}</div>
               <div className="button_basket_panel">
                 <button
@@ -71,7 +77,6 @@ const Basket = () => {
         })}
       </div>
     </div>
-    // </div>
   );
 };
 

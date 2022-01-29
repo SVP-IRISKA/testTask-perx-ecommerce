@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Header from "../header/header";
-import { getProducts } from "../../reducers/products";
-import { addToBasket, deleteFromBasket}  from "../../reducers/basket";
+import { getProducts } from "../../redux/reducers/products";
+import { addToBasket, deleteFromBasket}  from "../../redux/reducers/basket";
 import "./products.css";
 
 const Products = () => {
@@ -31,14 +31,14 @@ const Products = () => {
         {allProducts.map((item) => {
           return (
             <div
-              key={Date.now() + Math.floor(Math.random() * 1000)}
-              className="product"
+              key={Math.floor(Math.random() * 160000)}
+              className="product-card"
             >
               <div className="product-title">{item.name}</div>
               <hr></hr>
-              {/* <div className="product-image"> */}
-                <img className="product-image" src="https://murmuring-tor-81614.herokuapp.com/logo/node.png" alt="Защита картера" />
-              {/* </div> */}
+              <div className="product-image">
+                <img className="product-img" src="https://murmuring-tor-81614.herokuapp.com/logo/node.png" alt="Защита картера" />
+              </div>
               <div className="product-price">{`${item.price} $`}</div>
               <div className="product-btn-panel">
                 <button type="button" className="product-add-basket" onClick={() => delBasket(item.name)} >-</button>
@@ -49,7 +49,10 @@ const Products = () => {
           );
         })}
       </div>
+      <button className="products-add-list-btn" type="button">Загрузить еще...</button>
+
     </div>
+
   );
 };
 

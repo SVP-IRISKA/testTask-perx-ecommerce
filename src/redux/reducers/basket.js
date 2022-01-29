@@ -5,6 +5,7 @@ const initialState = {
 const ADD_TO_BASKET = "ADD_TO_BASKET";
 const REMOVE_FROM_BASKET = "REMOVE_FROM_BASKET";
 const DELETE_FROM_BASKET = "DELETE_FROM_BASKET";
+const CLEAR_BASKET = "CLEAR_BASKET";
 
 const changesBasket = (state = initialState, action) => {
   switch (action.type) {
@@ -43,6 +44,13 @@ const changesBasket = (state = initialState, action) => {
       };
     }
 
+    case CLEAR_BASKET: {
+      return {
+        ...state,
+        listBasket: {},
+      };
+    }
+
     default:
       return state;
   }
@@ -60,4 +68,8 @@ export function deleteFromProductBasket(name) {
   return { type: DELETE_FROM_BASKET, name };
 }
 
-export default changesBasket
+export function clearProductsBasket() {
+  return { type: CLEAR_BASKET };
+}
+
+export default changesBasket;
