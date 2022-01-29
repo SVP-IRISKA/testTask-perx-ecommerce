@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  padding: 10px;
+}
+
+.store-name {
+  width: 15%;
+  /* height: 166px; */
+  left: 0px;
+  top: 0px;
+  color: #156963;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 400%;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 24px 0px;
+}

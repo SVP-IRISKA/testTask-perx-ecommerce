@@ -1,0 +1,60 @@
+.table_basket {
+    display: flex;
+    flex-direction:column;
+}
+
+.all_basket_products {
+    display: flex;
+    flex-direction:column;
+}
+
+.basket_product {
+    display: flex;
+margin: 2% 10%;
+border: crimson 1px solid;
+padding: 2%;
+    justify-content: space-between; 
+}
+
+button {
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    margin: 2px;
+    border: 2px solid red;
+}
+
+.count-product {
+    margin: 2px 4px;
+}
+
+.btn_dell_from_basket {
+    width: 100px;
+    height: 60px;
+    padding: 3px;
+}
+
+.button_basket_panel {
+    display: inline-flex;
+    justify-content: space-between; 
+width: 30px;
+}
+
+
+
+/*  корзина форма заказа  */
+
+.order-basket-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+
+.order-basket-conteiner .order-amount-basket .order-quantity-basket {
+   display: block;
+    margin: 15px;
+    padding: 7px;
+}
+
+
