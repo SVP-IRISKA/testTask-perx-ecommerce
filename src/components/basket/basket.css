@@ -14,24 +14,59 @@
   border: crimson 1px solid;
   padding: 2%;
   justify-content: space-between;
+  height: 30px;
+align-items: center;
 }
 
-.basket_product button {
+/* .basket_product  {
   width: 30px;
-  height: 30px;
   padding: 2px;
   margin: 2px;
   border: 2px solid red;
-}
+} */
 
 .count-product {
   margin: 2px 4px;
 }
 
-.btn_dell_from_basket {
-  width: 100px;
-  height: 60px;
-  padding: 3px;
+.basket_product .product-title-basket {
+  font-size: 1.6em;
+  text-shadow: grey;
+  font-family: Montserrat;
+}
+
+.basket_product .btn-count-basket {
+  appearance: none;
+  border: 0.5px solid grey;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 5px 10px;
+  background: rgba(211, 211, 211, 0.445);
+  color: black;
+  padding: 5px 10px;
+  font-size: 16px;
+  box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.basket_product .count-product {
+  padding: 2%;
+  font-size: 1.6em;
+  text-shadow: grey;
+  font-family: Montserrat;
+}
+
+.basket_product .btn_dell_from_basket {
+  appearance: none;
+  border: 0.5px solid #642442;
+  width: 140px;
+  border-radius: 5px;
+  margin: 5px 10px;
+  background: rgba(211, 211, 211, 0.445);
+  color: rgb(156, 3, 3);
+  padding: 5px 10px;
+  font-size: 16px;
+  box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .button_basket_panel {

@@ -44,11 +44,11 @@ const Basket = () => {
                   alt="Защита картера"
                 />
               </div>
-              <div>{item[0]}</div>
+              <div className="product-title-basket">{item[0]}</div>
               <div className="button_basket_panel">
                 <button
                   type="button"
-                  className="count"
+                  className="btn-count-basket"
                   onClick={() => delBasket(item[0])}
                 >
                   -
@@ -57,7 +57,7 @@ const Basket = () => {
 
                 <button
                   type="button"
-                  className="count"
+                  className="btn-count-basket"
                   onClick={() => addBasket(item[0])}
                 >
                   +
