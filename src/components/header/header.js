@@ -33,9 +33,9 @@ const Header = () => {
             Количество товара: {totalProducs()}
           </div>
         </div>
-          <Link className="header-basket-btn-link" to="/basket">
-            Корзина
-          </Link>
+        <Link className="header-basket-btn-link" to="/basket">
+          Корзина
+        </Link>
       </div>
     </nav>
   );

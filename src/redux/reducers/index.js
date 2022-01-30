@@ -5,7 +5,7 @@ import basket from "./basket";
 const createRootReducer = () =>
   combineReducers({
     products,
-    basket
+    basket,
   });
 
 export default createRootReducer;

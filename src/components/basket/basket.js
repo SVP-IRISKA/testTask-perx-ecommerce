@@ -1,13 +1,14 @@
 import React from "react";
-import Header from "../header/header";
 import { useSelector, useDispatch } from "react-redux";
+import Header from "../header/header";
 import {
   addToBasket,
   deleteFromBasket,
   deleteFromProductBasket,
 } from "../../redux/reducers/basket";
-import "./basket.css";
 import BasketOrder from "./basketOrder";
+
+import "./basket.css";
 
 const Basket = () => {
   const productsBasket = useSelector((s) => s.basket.listBasket);

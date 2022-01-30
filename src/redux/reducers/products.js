@@ -1,16 +1,15 @@
 import axios from "axios";
 
 const initialState = {
-  listProducts: [
-  ],
+  listProducts: [],
 };
 
 const GET_PRODUCTS = "GET_PRODUCTS";
 
-export default (state = initialState, action) => {
+const changesProducts = (state = initialState, action) => {
   switch (action.type) {
     case GET_PRODUCTS: {
-      return { ...state, listProducts: action.listProducts};
+      return { ...state, listProducts: action.listProducts };
     }
     default:
       return state;
@@ -19,12 +18,14 @@ export default (state = initialState, action) => {
 
 export function getProducts() {
   return (dispatch) => {
-    axios("https://murmuring-tor-81614.herokuapp.com/api/goods/").then(
-      ({ data }) => {
-        dispatch({ type: GET_PRODUCTS, listProducts: data })
-      }
-    ).catch(() => {
-      dispatch({ type: GET_PRODUCTS, listProducts: [] })
-    });
+    axios("https://murmuring-tor-81614.herokuapp.com/api/goods/")
+      .then(({ data }) => {
+        dispatch({ type: GET_PRODUCTS, listProducts: data });
+      })
+      .catch(() => {
+        dispatch({ type: GET_PRODUCTS, listProducts: [] });
+      });
   };
 }
+
+export default changesProducts;

@@ -88,7 +88,6 @@ hr {
   padding: 5px 10px;
   font-size: 16px;
   box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
-
 }
 
 .products-add-list-btn {
@@ -102,7 +101,6 @@ hr {
   border: 1px solid #156963;
   border-radius: 5px;
   box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
-
 }
 
 @media (max-width: 450px) {
