@@ -28,16 +28,17 @@ const Basket = () => {
   return (
     <div>
       <Header />
-      <hr></hr>
       <BasketOrder />
-      <div className="table_basket">
+      <hr></hr>
+      <div className="table-basket">
         {Object.entries(productsBasket).map((item) => {
           //item [key, value]
           return (
             <div
               key={Math.floor(Math.random() * 160000)}
-              className="basket_product"
+              className="basket-product"
             >
+
               <div className="product-basket-image">
                 <img
                   className="product-image"
@@ -46,7 +47,7 @@ const Basket = () => {
                 />
               </div>
               <div className="product-title-basket">{item[0]}</div>
-              <div className="button_basket_panel">
+              <div className="button-basket-panel">
                 <button
                   type="button"
                   className="btn-count-basket"
@@ -64,18 +65,22 @@ const Basket = () => {
                   +
                 </button>
               </div>
-              <div>
+              <div className="dell-from-basket">
                 <button
-                  className="btn_dell_from_basket"
+                  className="btn-dell-from-basket"
                   type="button"
                   onClick={() => delProductBasket(item[0])}
                 >
                   Удалить из корзины
                 </button>
               </div>
-            </div>
-          );
-        })}
+       </div>
+          );        
+
+        }
+        )
+      }
+
       </div>
     </div>
   );

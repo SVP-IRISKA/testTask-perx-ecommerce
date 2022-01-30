@@ -83,6 +83,7 @@ nav {
     font-size: 30px;
   }
   nav .header-basket-panel {
+    justify-content: center;
     margin: 0 auto;
     width: 100%;
   }
@@ -91,7 +92,7 @@ nav {
     width: 30%;
   }
   nav .header-basket-btn-link {
-    font-size: 80%;
+    font-size: 100%;
   }
 }
 
